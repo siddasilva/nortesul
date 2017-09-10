@@ -9,7 +9,7 @@
           </div>
           <div class="col-lg-8 col-sm-8">
             <ol class="pull-right">
-              <h1 class="pequeno">AIRGO</h1>
+              <h1 class="pequeno">Avianca Virtual</h1>
             </ol>
           </div>
         </div>
@@ -24,13 +24,13 @@
           <table width="100%" id="tabledlist" class="table table-striped">
 	       <tbody>
 		     <tr>
-			   <td rowspan="4"><img src="<?php echo $basicinfo->imagelink; ?>" alt="No Images" width="200px"/></td>
+			   <td rowspan="4"><img src="<?php echo $basicinfo->imagelink; ?>" alt="Sem Imagens" width="200px"/></td>
 			   <td><strong>Tipo: </strong> <?php echo $basicinfo->fullname . "(" . $basicinfo->icao . ")"; ?></td>
 			   <td><strong>Alcance: </strong> <?php echo $basicinfo->range; ?></td>
 		     </tr>
 		     <tr>
 			   <td><strong>Max Carga: </strong> <?php echo $basicinfo->maxcargo; ?><i>lbs</i></td>
-			   <td><strong>Max Pax: </strong> <?php echo $basicinfo->maxpax; ?> <i></i>assentos</td>
+			   <td><strong>Max Pax: </strong> <?php echo $basicinfo->maxpax; ?> <i>assentos</i></td>
 		     </tr>
 		     <tr>
 			   <td><strong>Peso: </strong> <?php echo $basicinfo->weight; ?><i>lbs</i></td>
@@ -66,11 +66,11 @@
         <table width="100%" id="tabledlist" class="table table-striped">
 	     <thead>
 		     <tr>
-	           <th class="quadro roxo">Numero</th>
+	           <th class="quadro roxo">Número</th>
 		       <th class="quadro roxo">Decolagem</th>
 		       <th class="quadro roxo">Pouso</th>
 		       <th class="quadro roxo">Piloto no Comando</th>
-		       <th class="quadro roxo">Distancia</th>
+		       <th class="quadro roxo">Distância</th>
 		       <th class="quadro roxo">Lucro</th>
 		       <th class="quadro roxo">Landing Rate</th>
 		     </tr>

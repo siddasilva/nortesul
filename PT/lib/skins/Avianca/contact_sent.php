@@ -1,116 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Developed By M Abdur Rokib Promy">
-    <meta name="author" content="cosmic">
-    <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
-    <link rel="icon" href="<?php echo SITE_URL?>/lib/skins/LATAM/img/favicon.ico" type="image/x-icon"/>
-
-    <title>
-      Contato | LATAM Virtual
-    </title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/css/theme.css" rel="stylesheet">
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/css/bootstrap-reset.css" rel="stylesheet">
-    <!--external css-->
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo SITE_URL?>/lib/skins/LATAM/css/flexslider.css"/>
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo SITE_URL?>/lib/skins/LATAM/css/animate.css">
-    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-
-
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/css/style.css" rel="stylesheet">
-    <link href="<?php echo SITE_URL?>/lib/skins/LATAM/css/style-responsive.css" rel="stylesheet" />
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-<script src="<?php echo SITE_URL?>/lib/skins/LATAM/js/html5shiv.js">
-</script>
-<script src="<?php echo SITE_URL?>/lib/skins/LATAM/js/respond.min.js">
-</script>
-<![endif]-->
-  </head>
-
-  <body>
-    <!--header start-->
-    <header class="head-section">
-      <div class="navbar navbar-default navbar-static-top container">
-          <div class="navbar-header">
-              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html"><img src="<?php echo SITE_URL?>/lib/skins/LATAM/img/logo.png" alt="logo" style="width:192px; height:auto;"></a>
-          </div>
-          <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                  <li><a href="<?php echo SITE_URL?>/index.php/">Home</a></li>
-                  <li class="dropdown active">
-                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="#">Corporativo <i class="fa fa-angle-down"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/about">Quem Somos</a>
-                          </li>
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/staff">Administradores</a>
-                          </li>
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/rules">Regulamentos</a>
-                          </li>
-                          <li class="active">
-                              <a href="<?php echo SITE_URL?>/index.php/contact">Fale Conosco</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="#">Operações <i class="fa fa-angle-down"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/fleet">Frota</a>
-                          </li>
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/airports">Destinos</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="#">Membros <i class="fa fa-angle-down"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/pilots">Tripulantes</a>
-                          </li>
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/rank">Plano de Carreira</a>
-                          </li>
-                          <li>
-                              <a href="<?php echo SITE_URL?>/index.php/awards">Awards</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li><a href="<?php echo SITE_URL?>/index.php/registration">Voe Conosco</a></li>
-                  <li><a href="<?php echo SITE_URL?>/index.php/acars">Tracking</a></li>
-                  <li><a href="<?php echo SITE_URL?>/index.php/login">Login</a></li>
-              </ul>
-          </div>
-      </div>
-    </header>
-    <!--header end-->
-
-    <!--breadcrumbs start-->
+﻿    <!--breadcrumbs start-->
     <div class="breadcrumbs">
       <div class="container">
         <div class="row">
@@ -121,7 +9,7 @@
           </div>
           <div class="col-lg-8 col-sm-8">
             <ol class="pull-right">
-              <h1 class="pequeno">Unidos Somos LATAM</h1>
+              <h1 class="pequeno">Avianca Virtual</h1>
             </ol>
           </div>
         </div>
@@ -131,7 +19,7 @@
 
     <div class="container" id="tourpackages-carousel">
       <div class="alert alert-success">
-        <p>Sua mensagem foi enviada, iremos responder o mais rapido possivel.</p>
+        <p>Sua mensagem foi enviada, responderemos o mais rápido possível.</p>
       </div>
       <!-- End container -->
     </div>

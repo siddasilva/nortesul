@@ -9,7 +9,7 @@
           </div>
           <div class="col-lg-8 col-sm-8">
             <ol class="pull-right">
-              <h1 class="pequeno">AIRGO</h1>
+              <h1 class="pequeno">Avianca Virtual</h1>
             </ol>
           </div>
         </div>

@@ -57,7 +57,7 @@ else { echo "Cruise"; }?>
                 Sobre Nós
               </h1>
               <p>
-                A AirGo é uma organização virtual movida por entusiastas da aviação que busca simular com seriedade, qualidade e precisão nos simuladores de vôo da Microsoft e online nas redes internacionais de vôo virtual, IVAO e VATSIM.
+                A Avianca Virtual é uma organização virtual movida por entusiastas da aviação que busca simular com seriedade, qualidade e precisão as operações do Grupo Avianca Airlines nos simuladores de vôo da Microsoft e online nas redes internacionais de vôo virtual, IVAO e VATSIM.
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ else { echo "Cruise"; }?>
                 </div>
                 <div class="col-md-4">
                   <div class="copyright">
-                    <p>&copy; Copyright <?php echo date("Y");?> AirGo.  Todos os Direitos Reservados.</p>
+                    <p>&copy; Copyright <?php echo date("Y");?> Avianca Virtual.  Todos os Direitos Reservados.</p>
                   </div>
                 </div>
             </div>
