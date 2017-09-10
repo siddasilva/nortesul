@@ -279,66 +279,10 @@
           </p>
         </div>
         <div class="col-md-9">
-          <div class="outside">
-            <p>
-              <span id="slider-prev">
-              </span>
-              |
-              <span id="slider-next">
-              </span>
-            </p>
-          </div>
-
-          <ul class="bxslider1 clients-list">
-            <li>
-              <a href="http://vatsim.net">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/vatsim2.png" alt="" />
-
+          <ul class="clients-list">
+            <a href="http://vatsim.net">
                 <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/vatsim.png" class="color-img" alt="" />
               </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/graylogo6.png" alt="" />
-
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/newlogo6.png" class="color-img" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/graylogo6.png" alt="" />
-
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/newlogo6.png" class="color-img" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/graylogo6.png" alt="" />
-
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/newlogo6.png" class="color-img" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/graylogo6.png" alt="" />
-
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/newlogo6.png" class="color-img" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/graylogo6.png" alt="" />
-
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/newlogo6.png" class="color-img" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/graylogo6.png" alt="" />
-
-                <img src="i<?php echo SITE_URL?>/lib/skins/Avianca/mg/clients/newlogo6.png" class="color-img" alt="" />
-              </a>
-            </li>
 
           </ul>
 
