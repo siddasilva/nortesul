@@ -346,4 +346,13 @@ class ACARSData extends CodonData {
         return DB::get_results($sql);
         DB::debug();
     }
+	
+	public static function getLiveFlightCount($cot = '') { // make sure its not using flights that havent been updated by using cutoff time
+        $cutofftime = (empty($cutofftime)) ? Config::Get('ACARS_LIVE_TIME') : $cot; //ternary operator instead of if argument to reduce lines
+        $sql = 'SELECT COUNT(*) as total FROM ' . TABLE_PREFIX . 'acarsdata';
+        $sql .= ($cutofftime !== 0) ? ' WHERE DATE_SUB(NOW(), INTERVAL ' .$cutofftime .' MINUTE) <= `lastupdate`': '';
+
+        $result = DB::get_row($sql);
+        return $result->total;
+    }
 }

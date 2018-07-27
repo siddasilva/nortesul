@@ -17,13 +17,13 @@ Config::Set('ERROR_LEVEL', E_ALL ^ E_NOTICE);
 
 define('DBASE_USER', 'root');
 define('DBASE_PASS', 'vertrigo');
-define('DBASE_NAME', 'avianca');
+define('DBASE_NAME', 'aviancaNew');
 define('DBASE_SERVER', 'localhost');
 define('DBASE_TYPE', 'mysqli');
 
 define('TABLE_PREFIX', 'phpvms_');
 
-define('SITE_URL', 'http://localhost/avianca/PT');
+define('SITE_URL', 'http://localhost/aviancaNew/PT');
 
 # Page encoding options
 Config::Set('PAGE_ENCODING', 'utf-8');

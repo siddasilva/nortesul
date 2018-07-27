@@ -13,20 +13,20 @@
  */
 Config::Set('DEBUG_MODE', false);
 Config::Set('DEBUG_LEVEL', 1); // 1 logs query errors, 2 logs all queries
-Config::Set('ERROR_LEVEL', E_ALL ^ E_NOTICE);
+Config::Set('ERROR_LEVEL', 0);
 
 define('DBASE_USER', 'root');
 define('DBASE_PASS', 'vertrigo');
-define('DBASE_NAME', 'avianca');
+define('DBASE_NAME', 'aviancanew');
 define('DBASE_SERVER', 'localhost');
-define('DBASE_TYPE', 'mysqli');
+define('DBASE_TYPE', 'mysql');
 
 define('TABLE_PREFIX', 'phpvms_');
 
-define('SITE_URL', 'http://localhost/avianca/crewcenter2');
+define('SITE_URL', 'http://localhost/aviancanew/crewcenter2');
 
 # Page encoding options
-Config::Set('PAGE_ENCODING', 'utf-8');
+Config::Set('PAGE_ENCODING', 'ISO-8859-1');
 
 # Clean URLs - set this to true, and then uncomment
 # the lines indicated in the .htaccess file 
@@ -48,7 +48,7 @@ Config::Set('CHECK_BETA_VERSION', false);
 # See more details about these in the docs
 Config::Set('PAGE_EXT', '.htm');	# .htm is fine. You can still run PHP
 Config::Set('PILOTID_OFFSET', 0);	# What # to start pilot ID's from
-Config::Set('PILOTID_LENGTH', 3);	# Length of the Pilot ID
+Config::Set('PILOTID_LENGTH', 4);	# Length of the Pilot ID
 Config::Set('UNITS', 'nm');			# Your units: nm, mi or km
 Config::Set('LOAD_FACTOR', '82');	# %age load factor 
 Config::Set('CARGO_UNITS', 'lbs');

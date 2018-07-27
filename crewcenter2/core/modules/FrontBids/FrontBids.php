@@ -18,16 +18,13 @@
  
 class FrontBids extends CodonModule
 {
-
-	public function index()
-	{
-		$this->RecentFrontPage();
-	}
 	
-    public function RecentFrontPage($total=5)
-	{
+	public function bids() {
+        if (!Auth::LoggedIn())
+            return;
 
-		$this->set('lastbids', SchedulesData::GetLatestBids($total));
-		$this->render('frontpage_recentbids.tpl');
-	}
+        $this->set('bids', SchedulesData::GetBids(Auth::$pilot->pilotid));
+        $this->show('frontpage_recentbids.tpl');
+    }
 }
+?>

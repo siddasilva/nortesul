@@ -7,14 +7,15 @@
 			</h3>
             <hr>
 			<!-- END PAGE HEADER-->
-			<!-- BEGIN DASHBOARD STATS -->
-			<div class="row">
-                   <h2>Formulário de Pedido de Ausência</h2>
-<div class="alert alert-info">
-	<p>Bem vindo ao formulário de pedido de ausência. </p>
-</div>
 
-Suas Informações: <br/>
+    <!-- Main content -->
+    <section class="content container-fluid">
+        <h2>Formulário de Pedido de Ausência</h2>
+		<div class="row">
+           	<div class="alert alert-info">
+	<p>Bem vindo ao formulário de pedido de ausência. </p>
+</div>	
+        Suas Informações: <br/>
 <table class="table table-bordered table-striped table-hover">
 	<tr>
 		<td><strong>Nome</strong></td>
@@ -32,16 +33,15 @@ Suas Informações: <br/>
 		<td><strong>Matricula</strong></td>
 		<td><?php echo PilotData::GetPilotCode(Auth::$userinfo->code, Auth::$userinfo->pilotid) ?> </td>
 	</tr>
-</table>
+</table> 
 
 <div class="alert alert-info">
 	<p>
-		A Ausencia começa na data em que o formulário é enviado e termina na data selecionada pelo usuário, desde que a data da ausência não seja maior que <?php echo $leave_duration; ?> dias.
+		A Ausencia começa na data em que o formulário é enviado e termina na data selecionada pelo usuário, desde que a data da ausência não seja maior que 30 dias.
 Depois desse tempo você estará sujeito à política de inatividade. 
 	</p>
 </div>
 <hr />
-
 <table class="table table-bordered table-striped table-hover">
 	<form method="post" action="<?php echo url('/loa/submit');?>">
 	<tr>
@@ -94,11 +94,8 @@ Depois desse tempo você estará sujeito à política de inatividade.
 </table>
 
 </form>
-                    </div>
-                    <!-- END CONTENT BODY -->
-                </div>
-                <!-- END CONTENT -->
-			</div>
-			<!-- END DASHBOARD STATS -->
+        </div>		
+    </section>
+    <!-- /.content -->
 			<div class="clearfix">
 			</div>

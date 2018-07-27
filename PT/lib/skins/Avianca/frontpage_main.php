@@ -1,162 +1,175 @@
-﻿    <!-- Sequence Modern Slider -->
-    <div id="da-slider" class="da-slider">
+﻿	<!-- Sequence Modern Slider -->
+    <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(<?php echo SITE_URL; ?>/lib/skins/avianca/images/img_bg_3.jpg)">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+					
 
-            <div class="da-slide">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-              <h2>
-                <i>Bem-Vindo a Avianca Virtual!</i>
-                <br>
-                <i>Bienvenido a Avianca Virtual!</i>
-                <br>
-                <i>Welcome to Avianca Virtual!</i>
-              </h2>
-              <p>
-                <i>Não temos qualquer vinculo com a Avianca Linhas Aéreas S/A.</i>
-                <br />
-                <i>Somos apenas um Fã-Clube!</i>
-              </p>
-              <div class="da-img">
-                <!-- <img src="<?php echo SITE_URL?>/lib/skins/avianca/img/parallax-slider/images/2.png" alt="image01" /> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+					<div class="row row-mt-15em">
+						<div class="col-md-7 mt-text animate-box dividir" data-animate-effect="fadeInUp">
+							<h1>Venha voar nos céus VIRTUAIS</h1>	
+						</div>
+						<div class="col-md-4 col-md-push-1 mt-text animate-box" data-animate-effect="fadeInRight">
+									
+									
+											<h1>Se você deseja ir ao Site Oficial da Avianca, clique abaixo:</h1>
+											<a href="http://avianca.com.br" class="btn btn-danger">SITE OFICIAL AVIANCA</a>
+
+										
+									</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="gtco-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2>The best <b>Avianca Virtual</b> Airline</h2>
+					<p>Replicating Avianca operations in flight simulation</p>
+				</div>
+			</div>
+			
+            <div class="row">
+			    <div class="col-md-6">
+				    <h2> <?php
+$hr = date(" H ");
+if($hr >= 12 && $hr<18) {
+$resp = "Boa tarde";}
+else if ($hr >= 0 && $hr <12 ){
+$resp = "Bom dia";}
+else {
+$resp = "Boa noite";}
+echo "$resp";
+?>, bem vindo a Avianca Virtual</h2>
+					<h4>A <b>Avianca Virtual</b> é uma Companhia Aérea Virtual sem fins lucrativos que busca simular com a maior fidelidade possível as operações da <b>Avianca Brasil</b>. <p>Atualmente contamos com <b><?php echo StatsData::PilotCount(); ?></b> membros que simulam através das redes de voo online IVAO e VATSIM, utilizando as plataformas Microsoft Flight Simulator, XPlane, Prepar3D e softwares próprios que deixam a simulação mais próxima da realidade.</p></h4>
+				</div>
+				<div class="col-md-6">
+				     <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Últimos Voos</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Novos Pilotos</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home"><?php MainController::Run('PIREPS', 'RecentFrontPage', 5); ?></div>
+    <div role="tabpanel" class="tab-pane" id="messages"><?php MainController::Run('Pilots', 'RecentFrontPage', 10); ?></div>
+  </div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2>Processo de Admissão</h2>
+					<p>Possuímos um processo de admissão que visa a praticidade e eficiencia na escolha de nossos membros.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>1</i>
+						</span>
+						<h3>Realização do Cadastro</h3>
+						<p>O futuro membro preenche um cadastro informando alguns dados</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>2</i>
+						</span>
+						<h3>Avaliação do Cadastro</h3>
+						<p>Nosso departamento de RH avalia os cadastros</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>3</i>
+						</span>
+						<h3>Acesso ao CrewCenter</h3>
+						<p>Caso aprovado, o membro já possuirá acesso ao CrewCenter</p>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</div>
 
 
-    </div>
-    <div class="container">
-      <div class="row mar-b-50">
-        <div class="col-md-12">
-          <div class="text-center feature-head wow fadeInDown">
-            <h1 class="">
-              Bem Vindo a <b class="cor">Avianca Virtual</b>
-            </h1>
+	<div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_1.jpg)"  data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container text-center">
+			<div class="display-t">
+				<div class="display-tc">
+					<h1>Temos sistemas e aplicativos que temos certeza que você irá adorar!</h1>
+				</div>	
+			</div>
+		</div>
+	</div>
 
-          </div>
-          <!--feature end-->
-        </div>
-      </div>
-    </div>
+	<div id="gtco-counter" class="gtco-section">
+		<div class="gtco-container">
 
-    <div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2>Detentora oficial do callsign <b>ONE</b> nas redes</h2>
+					<p>Utilizamos as principais redes de simulação aérea virtual, <b>VATSIM</b> e <b>IVAO</b></p>
+				</div>
+			</div>
+ 
+			<div class="row">
+				
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="<?php echo StatsData::TotalSchedules(); ?>" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">Rotas</span>
 
-      <div class="row mar-b-60">
-        <div class="col-lg-6">
-          <!--tab start-->
-          <section class="tab wow fadeInLeft">
-            <header class="panel-heading tab-bg-dark-navy-blue">
-              <ul class="nav nav-tabs nav-justified">
-                <li class="active">
-                  <a data-toggle="tab" href="#news">
-                    Noticias
-                  </a>
-                </li>
-                <li>
-                  <a data-toggle="tab" href="#events">
-                    Ultimos Voos
-                  </a>
-                </li>
-                <li class="">
-                  <a data-toggle="tab" href="#notice-board">
-                    Novos Pilotos
-                  </a>
-                </li>
-              </ul>
-            </header>
-            <div class="panel-body">
-              <div class="tab-content tasi-tab">
-                <div id="news" class="tab-pane fade in active">
-                  <article class="media">
-                    <div class="media-body b-btm">
-                      <?php MainController::Run('News', 'ShowNewsFront', 5); ?>
-                    </div>
-                  </article>
-                </div>
-                <div id="events" class="tab-pane fade">
-                  <article class="media">
-                    <a class="pull-left thumb p-thumb">
-                      <!--image goes here-->
-                    </a>
-                    <div class="media-body b-btm">
-                        <?php MainController::Run('PIREPS', 'RecentFrontPage', 5); ?>
-                    </div>
-                  </article>
-                </div>
-                <div id="notice-board" class="tab-pane fade">
-                <?php MainController::Run('Pilots', 'RecentFrontPage', 10); ?>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!--tab end-->
-        </div>
-        <div class="col-lg-6">
-          <!--testimonial start-->
-          <div class="about-testimonial boxed-style about-flexslider ">
-            <section class="slider wow fadeInRight">
-              <div class="flexslider">
-                <ul class="slides about-flex-slides">
-                  <li>
-                    <div class="about-testimonial-image ">
-                      <img alt="" src="<?php echo SITE_URL?>/lib/skins/Avianca/img/team/CEO.jpg">
-                    </div>
-                    <a class="about-testimonial-author" href="#">
-                      Arthur Hetem
-                    </a>
-                    <span class="about-testimonial-company">
-                      CEO - Chief Executive Officer
-                    </span>
-                    <div class="about-testimonial-content">
-                      <p class="about-testimonial-quote">
-                        É mais do que voar, é voar com respeito, paixão e amigos, Não é apenas uma empresa virtual mais sim uma familia.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="about-testimonial-image ">
-                      <img alt="" src="<?php echo SITE_URL?>/lib/skins/Avianca/img/team/VP.jpg">
-                    </div>
-                    <a class="about-testimonial-author" href="#">
-                      Juan Ceschini
-                    </a>
-                    <span class="about-testimonial-company">
-                      Vice-Presidente
-                    </span>
-                    <div class="about-testimonial-content">
-                      <p class="about-testimonial-quote">
-                        Simular faz parte da rotina de qualquer piloto, simular com alto nível de realismo é uma forma de desenvolver cada vez mais nossas habilidades algo imprescindível para um bom piloto.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          <!--testimonial end-->
-        </div>
-        </div>
-      </div>
-	  
-    <div id="home-services">
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="<?php echo StatsData::PilotCount(); ?>" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">Tripulantes</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="<?php echo StatsData::TotalAircraftInFleet(); ?>" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">Aeronaves</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+					<div class="feature-center">
+						<span class="counter js-counter" data-from="0" data-to="<?php echo StatsData::TotalFlights(); ?>" data-speed="5000" data-refresh-interval="50">1</span>
+						<span class="counter-label">Voos</span>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>
-              Realismo para a sua simulação é aqui!
-            </h2>
-          </div>
-
-          <div class="col-md-4">
-            <div class="h-service">
-              <div class="icon-wrap ico-bg round-fifty wow fadeInDown">
-                <i class="fa fa-plane">
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+	
+	<div class="row gtco-container">
+<div class="row">
+				<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="fas fa-plane">
                 </i>
               </div>
-              <div class="h-service-content wow fadeInUp">
                 <h3>
                   Navegação SITA
                 </h3>
@@ -164,16 +177,12 @@
                   A Navegação SITA é uma navegação que tem como finalidade ajudar o piloto em sua própria navegação assim como no controle de combustivel tal como ZFW TOW TFW TPW MTOW etc.
                   <br>
                 </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="h-service">
-              <div class="icon-wrap ico-bg round-fifty wow fadeInDown">
-                <i class="fa fa-gears">
+			<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="far fa-folder-open">
                 </i>
               </div>
-              <div class="h-service-content wow fadeInUp">
                 <h3>
                   LoadSheet
                 </h3>
@@ -181,36 +190,27 @@
                   É a preparação utilizada para cada voo, como peso e distribuição de carga no compartimento e muito mais.
                   <br>
                 </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="h-service">
-              <div class="icon-wrap ico-bg round-fifty wow fadeInDown">
-                <i class="fa fa-qrcode">
+			<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="fas fa-tablet-alt">
                 </i>
               </div>
-              <div class="h-service-content wow fadeInUp">
                 <h3>
                   Briefing
                 </h3>
                 <p>
-                  Briefing apresenta ao piloto todas as informações necessárias para o voo, tais como os NOTAMS dos aerodromos a serem usados no voo e todas as cartas atualizadas no mesmo local e muito mais...
+                  Briefing apresenta ao piloto as informações necessárias para o voo, como os NOTAMS e todas as cartas atualizadas no mesmo local e muito mais...
                   <br>
                 </p>
-              </div>
             </div>
-          </div>
-        </div>
-        <!-- /row -->
-        <div class="row">
-          <div class="col-md-4">
-            <div class="h-service">
-              <div class="icon-wrap ico-bg round-fifty wow fadeInDown">
-                <i class="fa fa-sitemap">
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="fas fa-binoculars">
                 </i>
               </div>
-              <div class="h-service-content wow fadeInUp">
                 <h3>
                   Weather Briefing
                 </h3>
@@ -218,34 +218,41 @@
                   Destina-se como uma ferramenta para ajudar os pilotos a visualizarem melhor o tempo e riscos relacionados ao clima sobre os aeródromos para o voo.
                   <br>
                 </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="h-service">
-              <div class="icon-wrap ico-bg round-fifty wow fadeInDown">
-                <i class="fa fa-image">
+				<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="fa fa-plane">
                 </i>
               </div>
-              <div class="h-service-content wow fadeInUp">
                 <h3>
-                  Central de Exames
+                  IVAO/VATSIM Flight Plan
                 </h3>
                 <p>
-                  <!-- A Central de Exames é um ambiente direcionado ao aprendizado de nossos pilotos, os exames poderão ser comprados com o salário virtual, e algumas patentes necessitam dessas certificações aprovadas. -->
-				  Em Breve...
+                  O objetivo de um plano de voo apresentado (FPL) é trazer mais comodidade aos pilotos operantes nas redes de voo IVAO e VATSIM
                   <br>
                 </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="h-service">
-              <div class="icon-wrap ico-bg round-fifty wow fadeInDown">
-                <i class="fa fa-server">
+
+
+				<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="fas fa-graduation-cap">
                 </i>
               </div>
-              <div class="h-service-content wow fadeInUp">
+                <h3>
+                  Academia
+                </h3>
+                <p>
+                  A academia é um ambiente direcionado ao aprendizado de nossos pilotos, os exames são utilizados para promoção de patentes, instrução para inativos entre outros.
+                  <br>
+                </p>
+            </div>
+</div>
+				<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="far fa-file-pdf">
+                </i>
+              </div>
                 <h3>
                   SOP AviancaV
                 </h3>
@@ -253,41 +260,39 @@
                   STANDARD OPERATING PROCEDURES integra o Manual Geral de Operações que é um conjunto de documentos e guias operacionais a ser seguido pelos tripulantes para que a Avianca Virtual alcance o nível máximo de qualidade operacional possível.
                   <br>
                 </p>
-              </div>
             </div>
-          </div>
-        </div>
-        <!-- /row -->
-
-      </div>
-      <!-- /container -->
-
-    </div>
-    <!-- service end -->
-    <div class="hr">
-      <span class="hr-inner"></span>
-    </div>
-
-    <div class="container">
-      <div class="row mar-b-50 our-clients">
-        <div class="col-md-3">
-          <h2>
-            Nossos Parceiros
-          </h2>
-          <p>
-            Parceiros que colaboram com a Avianca Virtual.
-          </p>
-        </div>
-        <div class="col-md-9">
-          <ul class="clients-list">
-            <a href="http://vatsim.net">
-                <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/clients/vatsim.png" class="color-img" alt="" />
-              </a>
-
-          </ul>
-
-
-        </div>
-      </div>
-      <!-- END CLIENTS -->
-    </div>
+				<div class="col-md-4">
+              <div class="icon-wrap ico-bg round-fifty animate-box">
+                <i class="fas fa-location-arrow">
+                </i>
+              </div>
+                <h3>
+                  CGNA
+                </h3>
+                <p>
+                  Gerencia todo o fluxo de tráfego aéreo, e com a RPL (Planos de Voo Repetitivo) utilizamos para mantermos todas as nossas rotas atualizadas.
+                  <br>
+                </p>
+            </div>
+            </div>
+			
+	
+	<div id="gtco-subscribe">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2>Nossos <b>Parceiros</b></h2>
+					<div class="owl-carousel owl-theme">
+    <div class="item"><a href="http://vatsim.net"><img src="<?php echo SITE_URL; ?>/lib/skins/avianca/images/parceiros/vatsim.png"></a></div>
+    <div class="item"><h4></h4></div>
+    <div class="item"><h4></h4></div>
+</div>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					
+				</div>
+			</div>
+		</div>
+	</div>

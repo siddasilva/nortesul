@@ -74,6 +74,9 @@ class ACARS extends CodonModule
 			$c = (array) $flight; // Convert the object to an array
 
 			$c['pilotid'] = PilotData::GetPilotCode($c['code'], $c['pilotid']);
+			$totaldistance = round(SchedulesData::distanceBetweenPoints($flight->deplat, $flight->deplng, $flight->arrlat, $flight->arrlng));
+            $percomplete = ABS(number_format(((($totaldistance - $flight->distremain) / $totaldistance) * 100), 2));
+            $c['percomplete'] = $percomplete;
 
 			// Normalize the data
 			if($c['timeremaining'] == '') {

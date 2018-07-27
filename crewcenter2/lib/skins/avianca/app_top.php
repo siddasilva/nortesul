@@ -1,220 +1,174 @@
-<!-- BEGIN HEADER -->
-<div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
-	<!-- BEGIN HEADER INNER -->
-	<div class="page-header-inner">
-		<!-- BEGIN LOGO -->
-		<div class="page-logo">
-			<a href="<?php echo SITE_URL?>/index.php">
-			<img src="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/layout/img/logo.png" alt="logo" class="logo-default" width="100px" height="40px"/>
-			</a>
-			<div class="menu-toggler sidebar-toggler">
-			</div>
-		</div>
-		<!-- END LOGO -->
-		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-		</a>
-		<!-- END RESPONSIVE MENU TOGGLER -->
-		<!-- BEGIN TOP NAVIGATION MENU -->
-		<div class="top-menu">
-			<ul class="nav navbar-nav pull-right">
-				<!-- BEGIN INBOX DROPDOWN -->
-				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-				<li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<i class="icon-envelope-open"></i>
-					<span class="badge badge-default">
-					<?php MainController::Run('Mail', 'checkmail'); ?></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li class="external">
-							<h3>Você Tem <span class="bold"><?php MainController::Run('Mail', 'checkmail'); ?> Novas</span> Mensagens</h3>
-							<a href="page_inbox.html">Ver</a>
-						</li>
-					</ul>
-				</li>
-				<!-- END INBOX DROPDOWN -->
-				<!-- BEGIN USER LOGIN DROPDOWN -->
-				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-				<li class="dropdown dropdown-user">
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle" src="<?php echo PilotData::getPilotAvatar($pilotcode); ?>"/>
-					<span class="username username-hide-on-mobile">
-					<?php echo Auth::$userinfo->firstname;?> <?php echo Auth::$userinfo->lastname;?> </span>
-					<i class="fa fa-angle-down"></i>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-default">
-						<li>
-							<a href="<?php echo SITE_URL?>/../PT/index.php">
-							<i class="icon-lock"></i> Site </a>
-						</li>
-						<li>
-							<a href="<?php echo SITE_URL?>/index.php/logout">
-							<i class="icon-key"></i> Logout </a>
-						</li>
-					</ul>
-				</li>
-				<!-- END USER LOGIN DROPDOWN -->
-			</ul>
-		</div>
-		<!-- END TOP NAVIGATION MENU -->
-	</div>
-	<!-- END HEADER INNER -->
-</div>
-<!-- END HEADER -->
-<div class="clearfix">
-</div>
-<!-- BEGIN CONTAINER -->
-<div class="page-container">
-	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<ul class="page-sidebar-menu page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-				<li class="sidebar-search-wrapper">
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
-					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-					&nbsp;
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
-				</li>
-				<li class="start active open">
-					<a href="<?php echo SITE_URL?>/index.php/profile">
-					<i class="icon-home"></i>
-					<span class="title">Home</span>
-					<span class="selected"></span>
-					</a>
-				</li>
-				<li class="heading">
-					<h3 class="uppercase">Sistema de Voos</h3>
-				</li>
-				<?php
-				  if($bids){
-			    ?>
-				<li>
-					<a href="<?php echo SITE_URL?>/index.php/schedules/bids">
-					<i class="icon-plane"></i>
-					<span class="badge badge-roundless badge-warning"><?php echo count($bids);?></span>
-					<span class="title">Escala Reservada</span>
-					</a>
-				</li>
-				<?php
-				  }
-				  if(!$bids){
-					  ?>
-					<li>
-					<a href="javascript:;">
-					<i class="icon-plane"></i>
-					<span class="title">Despacho de Voos</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="<?php echo SITE_URL?>/index.php/randomflights">
-							Gerar Escala</a>
-						</li>
-						<li>
-							<a href="<?php echo SITE_URL?>/index.php/schedules">
-							Gerar Charter</a>
-						</li>
-						<li>
-							<a href="<?php echo SITE_URL?>/index.php/jumpseat">
-							Jumpseat</a>
-						</li>
-					</ul>
-				</li>
-				<?php	
-				  }  
-				  ?>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-doc"></i>
-					<span class="badge badge-roundless badge-warning">Em breve</span>
-					<span class="title">Cartas Aéreas</span>
-					</a>
-				</li>
-				<li class="heading">
-					<h3 class="uppercase">Perfil</h3>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-settings"></i>
-					<span class="badge badge-roundless badge-warning">Em breve</span>
-					<span class="title">Opções do perfil</span>
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo SITE_URL?>/index.php/pireps/routesmap">
-					<i class="icon-notebook"></i>
-					<span class="title">Logbook</span>
-					</a>
-				</li>
-				<li class="heading">
-					<h3 class="uppercase">Operacional</h3>
-				</li>
-				<li>
-					<a href="<?php echo SITE_URL?>/index.php/acars">
-					<i class="icon-map"></i>
-					<span class="title">Tracking</span>
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo SITE_URL?>/index.php/mail">
-					<i class="icon-envelope"></i>
-					<span class="badge badge-roundless badge-warning"><?php MainController::Run('Mail', 'checkmail'); ?></span>
-					<span class="title">Intra-mail</span>
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo url('/loa'); ?>">
-					<i class="icon-user-unfollow"></i>
-					<span class="title">Solicitar Afastamento</span>
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo url('/downloads'); ?>">
-					<i class="icon-cloud-download"></i>
-					<span class="title">Downloads</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-graduation"></i>
-					<span class="badge badge-roundless badge-warning">EM BREVE</span>
-					<span class="title">Acadameia</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-pointer"></i>
-					<span class="badge badge-roundless badge-warning">EM BREVE</span>
-					<span class="title">Eventos</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-book-open"></i>
-					<span class="badge badge-roundless badge-warning">EM BREVE</span>
-					<span class="title">Finanças</span>
-					</a>
-				</li>
-				<?php
+<!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="<?php echo SITE_URL?>/index.php/profile" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>O</b>N<b>E</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Avianca</b>Virtual</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success"><?php MainController::Run('Mail', 'checkmail'); ?></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header"><h4>Você Tem <span class="bold"><?php MainController::Run('Mail', 'checkmail'); ?> Novas</span> Mensagens</h4></li>
+              <li class="footer"><a href="<?php echo SITE_URL?>/index.php/mail">Ver</a></li>
+            </ul>
+          </li>
+          <!-- /.messages-menu -->
+		  
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="<?php echo PilotData::getPilotAvatar($pilotcode); ?>" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs"><?php echo Auth::$userinfo->firstname;?> <?php echo Auth::$userinfo->lastname;?></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="<?php echo PilotData::getPilotAvatar($pilotcode); ?>" class="img-circle" alt="User Image">
+
+                <p>
+                  <?php echo Auth::$userinfo->firstname;?> <?php echo Auth::$userinfo->lastname;?> - <?php echo Auth::$userinfo->rank;?>
+                  <small>Membro Desde <?php echo date(DATE_FORMAT, strtotime($userinfo->joindate));?></small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <?php echo Auth::$userinfo->totalflights?> Voos
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <?php echo Auth::$userinfo->totalhours;?> Horas
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <?php echo $userinfo->hub?>
+                    </div>
+                  </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="<?php echo SITE_URL?>/../PT/index.php" class="btn btn-default btn-flat">Site</a>
+                </div>
+                <div class="pull-right">
+                  <a href="<?php echo SITE_URL?>/../PT/index.php/logout" class="btn btn-default btn-flat">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-reorder"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="<?php echo PilotData::getPilotAvatar($pilotcode); ?>" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p><?php echo Auth::$userinfo->firstname;?> <?php echo Auth::$userinfo->lastname;?></p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li><a href="<?php echo SITE_URL?>/index.php/profile"><i class="fa fa-home"></i> <span>Home</span></a></li>
+		<li class="header">SISTEMAS DE VOOS</li>
+		<?php
+          $contabids = SchedulesData::GetBids(Auth::$pilot->pilotid);
+		  $bidscontados = COUNT($contabids);
+
+    if ($bidscontados > 0)
+		{
+			echo $bidsconstados;
+		}
+		else
+		{
+			$bidsconstados =  "0";
+		}
+	      if($bidscontados >0){
+		?>
+		<li><a href="<?php echo SITE_URL?>/index.php/schedules/bids"><i class="fa fa-plane"></i> <span>Escala Reservada<span class="label label-danger pull-right"><?php echo $bidscontados ;?></span></span></a></li>
+		<?php
+		  }
+		  else
+		  {
+		  ?>
+	    <li class="treeview">
+          <a href="#"><i class="fa fa-plane"></i> <span>Despacho de Voos</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">Gerar Escala<span class="label label-danger pull-right-container">INOP</span></a></li>
+            <li><a href="<?php echo SITE_URL?>/index.php/fltbook">Gerar Charter</a></li>
+			<li><a href="<?php echo SITE_URL?>/index.php/realschedulelite">Jumpseat</a></li>
+          </ul>
+        </li>
+		<?php
+		   }
+		  ?>
+        <li><a href="#"><i class="fa fa-file-o"></i> <span>Cartas Aéreas</span></a></li>
+		<li class="header">PERFIL</li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-gear"></i> <span>Opções de Perfil</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo SITE_URL?>/index.php/profile/editprofile">Editar Perfil</a></li>
+            <li><a href="<?php echo SITE_URL?>/index.php/profile/changepassword">Alterar Senha</a></li>
+          </ul>
+        </li>
+		<li class="header">OPERACIONAL</li>
+		<li><a href="<?php echo SITE_URL?>/index.php/acars"><i class="fa fa-paper-plane-o"></i> <span>Tracking</span></a></li>
+		<li><a href="#"><i class="fa fa-envelope-o"></i> <span>Intra-mail</span><span class="label label-danger pull-right-container">INOP</span></a></li>
+		<li><a href="http://airgocargo.000webhostapp.com/hesk/"><i class="fa fa-headphones"></i> <span>HelpDesk</span></a></li>
+		<li><a href="<?php echo SITE_URL?>/index.php/loa"><i class="fa fa-user-times"></i> <span>Solicitar Afastamento</span></a></li>
+		<li><a href="<?php echo SITE_URL?>/index.php/downloads"><i class="fa fa-cloud-download"></i> <span>Downloads</span></a></li>
+		<li><a href="<?php echo SITE_URL?>/index.php/events"><i class="fa fa-map"></i> <span>Tours</span></a></li>
+		<li><a href="<?php echo SITE_URL?>/index.php/finances"><i class="fa fa-book"></i> <span>Finanças</span></a></li>
+		<?php
               if(Auth::LoggedIn() && PilotGroups::group_has_perm(Auth::$usergroups, ACCESS_ADMIN))
               {
-                echo '<li><a href="'.fileurl('/admin').'"><i class="icon-wrench"></i> <span class="title">Administrar</span></a></li>';
+                echo '<li><a href="'.fileurl('/admin').'"><i class="fa fa-wrench"></i> <span>Administrar</span></a></li>';
               }
             ?>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
-	<!-- END SIDEBAR -->
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>

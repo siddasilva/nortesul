@@ -1,8 +1,9 @@
 <?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
-Dear <?php echo $firstname .' '. $lastname; ?>,
+Caro <?php echo $firstname .' '. $lastname; ?>,
 
-Your account have been made at <?php echo SITE_NAME?>, but your account has not yet been activated. You will receive an email when your registration has been activated by someone on our staff.
+Seu Cadastro na <?php echo SITE_NAME?> foi efetuado, Porém sua conta ainda passará por uma analise. Você recebera um e-mail em breve, com a resposta de seu cadastro.
 
 
-Thanks!
-<?php echo SITE_NAME?> Staff
+Obrigado!
+Recursos Humanos,
+<?php echo SITE_NAME?>

@@ -1,32 +1,31 @@
-﻿    <!--breadcrumbs start-->
-    <div class="breadcrumbs">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-4">
-            <h1>
-             CÓdigo de Conduta
-            </h1>
-          </div>
-          <div class="col-lg-8 col-sm-8">
-            <ol class="pull-right">
-              <h1 class="pequeno">Avianca Virtual</h1>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--breadcrumbs end-->
+﻿   <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(<?php echo SITE_URL; ?>/lib/skins/avianca/images/img_bg_3.jpg)">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="row row-mt-15em">
+
+						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1>Regulamento</h1>
+                            <small><ol class="breadcrumb">
+  <li>Home</li>
+  <li>Organização</li>
+  <li class="active"><b>Regulamento</b></li>
+</ol></small>							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</header>
 
     <div class="container" id="tourpackages-carousel">
 
       <div class="row">
         <div class="profile">
-          <h2>
-            Regulamento <b class="cor">Avianca Virtual</b>
-            <br>
-            <small>Leia atentamente todo o <b class="cor">regulamento</b>, ele é de ciência obrigatória de todos os tripulantes.</small>
-          </h2>
-          <hr>
+		<hr>
           <h3>1ª Cláusula</h3>
           <hr>
             <h4>Considerações Iniciais</h4>
@@ -98,8 +97,16 @@
 				5º§ - Este regulamento só possui a finalidade de manter a ordem dentro da VA.<br>
 				6º§ - A Avianca Virtual, não possui qualquer vínculos com a <b class="cor">AVIANCA AIRLINES S/A</b>. Somos apenas um Fã-Clube.<br>
 				</p>
-                <hr>
-                <div class="pull-right"><h2>Sem Mais, Staff <span class="cor">Avianca Virtual</span></h2></div>    
+                  <div class="alert alert-danger" role="alert"><i class="fas fa-exclamation"></i><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Se você concorda com as nossas regras, então poderá continuar o processo de admissão após aceitar os termos abaixo.</div>
+				  <div class="col-md-8 pull-right">
+				  <label class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Li e concordo com os termos apresentados neste regulamento.</span>
+</label>
+<br>
+				  <a href="<?php echo SITE_URL; ?>/index.php/registration" class='btn btn-primary'>CONTINUAR</a>
+				  </div>
 				</div>          
              
         </div>

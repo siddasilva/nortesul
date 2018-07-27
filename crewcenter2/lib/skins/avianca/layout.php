@@ -1,71 +1,91 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
-Version: 3.7.0
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en" class="no-js">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
+<html>
 <head>
-<meta charset="utf-8"/>
-<title>Avianca Virtual | CrewCenter</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="" name="description"/>
-<meta content="" name="author"/>
-<!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
-<!-- END GLOBAL MANDATORY STYLES -->
-<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
-<!-- END PAGE LEVEL PLUGIN STYLES -->
-<!-- BEGIN PAGE STYLES -->
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/select2/select2.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/pages/css/login3.css" rel="stylesheet" type="text/css"/>
-<!-- END PAGE STYLES -->
-<!-- BEGIN THEME STYLES -->
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/css/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/css/plugins-md.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
-<link href="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<!-- END THEME STYLES -->
-<link rel="shortcut icon" href="favicon.ico"/>
-</head>
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
-<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
-<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
-<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
-<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
-<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
-<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
-<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
-<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
-<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
-<body class="page-md page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo login">
+  <meta charset="utf-8">
+  <link rel="icon" href="<?php echo SITE_URL ?>/lib/skins/avianca/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Avianca Virtual | CrewCenter</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/lib/skins/avianca/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/lib/skins/avianca/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/lib/skins/avianca/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/lib/skins/avianca/dist/css/skins/skin-red.min.css">
+    <!-- iCheck -->
+  <link rel="stylesheet" href="<?php echo SITE_URL ?>/lib/skins/avianca/plugins/iCheck/square/red.css">
 
-        <?php echo $page_htmlreq; ?>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+ <style>
+  .widget{
+	 background-color:#DA0808; 
+	 color:#FFF;
+	 height:80px;
+	 width:80px;
+   }
+   .widget:hover{
+	 background-color:#fff; 
+	 color:#DA0808;
+	 border:1px solid #DA0808;
+	 transition-property:background-color color border;
+	 transition-duration:0.5s;
+	 transition-timing-function:ease-out;
+	 transition-delay: 0.1s;
+   }
+   .cor{
+	 color:#DA0808;
+   }
+   .avianca{
+	background-color:#DA0808;
+	color:#FFF;
+   }
+    .btn.aqua-gradient {
+		color:#fff;
+    background: -webkit-linear-gradient(50deg,#2096ff,#05ffa3)!important;
+    background: linear-gradient(40deg,#2096ff,#05ffa3)!important;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+ </style>
+ <script type="text/javascript" src="<?php echo fileurl('lib/js/simbrief.apiv1.js');?>"></script>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="<?php if(Auth::LoggedIn()){ echo "hold-transition skin-red sidebar-mini";} else{ echo "login-page";}?>">
+<div class="<?php if(Auth::LoggedIn()){ echo "wrapper";} else{ echo " ";}?>">
+<?php echo $page_htmlreq; ?>
 		<?php
 		// var_dump($_SERVER['REQUEST_URI']);
 		# Hide the header if the page is not the registration or login page
@@ -76,12 +96,14 @@ License: You must have a valid license purchased only from themeforest(the above
 			}
 		}
 		?>
-        
-        <div id="content">
-            <?php echo $page_content; ?>
-        </div>
-        
-		<?php
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="<?php if(Auth::LoggedIn()){ echo "content-wrapper";} else{ echo " ";}?>">
+    <?php echo $page_content; ?>
+  </div>
+  <!-- /.content-wrapper -->
+  
+  <?php
 		# Hide the footer if the page is not the registration or login page
 		# Bit hacky, don't like doing it this way
 		if (!isset($_SERVER['REQUEST_URI']) || ltrim($_SERVER['REQUEST_URI'],'/') !== SITE_URL.'/index.php/login' || ltrim($_SERVER['REQUEST_URI'],'/') !== SITE_URL.'/index.php/registration') {
@@ -90,65 +112,24 @@ License: You must have a valid license purchased only from themeforest(the above
 			}
 		}
 		?>
-		
-<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-<!-- BEGIN CORE PLUGINS -->
-<!--[if lt IE 9]>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/respond.min.js"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/excanvas.min.js"></script> 
-<![endif]-->
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery.pulsate.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap-daterangepicker/moment.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-<!-- IMPORTANT! fullcalendar depends on jquery-ui-1.10.3.custom.min.js for drag & drop support -->
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/plugins/gritter/js/jquery.gritter.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/global/scripts/metronic.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/pages/scripts/index.js" type="text/javascript"></script>
-<script src="<?php echo SITE_URL?>/lib/skins/avianca/assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="<?php echo SITE_URL ?>/lib/skins/avianca/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<?php echo SITE_URL ?>/lib/skins/avianca/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo SITE_URL ?>/lib/skins/avianca/dist/js/adminlte.min.js"></script>
+<!-- iCheck -->
+<script src="<?php echo SITE_URL ?>/lib/skins/avianca/plugins/iCheck/icheck.min.js"></script>
 <script>
-jQuery(document).ready(function() {    
-   Metronic.init(); // init metronic core componets
-   Layout.init(); // init layout
-   QuickSidebar.init() // init quick sidebar
-   Index.init();   
-   Index.initDashboardDaterange();
-   Index.initJQVMAP(); // init index page's custom scripts
-   Index.initCalendar(); // init index page's custom scripts
-   Index.initCharts(); // init index page's custom scripts
-   Index.initChat();
-   Index.initMiniCharts();
-   Tasks.initDashboardWidget();
-});
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-red',
+      radioClass: 'iradio_square-red',
+      increaseArea: '20%' // optional
+    });
+  });
 </script>
-<!-- END JAVASCRIPTS -->		
+</body>
+</html>				

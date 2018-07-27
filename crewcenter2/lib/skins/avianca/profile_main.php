@@ -1,212 +1,207 @@
-	<!-- BEGIN CONTENT -->
-	<div class="page-content-wrapper">
-		<div class="page-content">
-			<!-- BEGIN PAGE HEADER-->
-			<h3 class="page-title">
-		<small><span class="badge badge-roundless badge-success">Versão Alpha do Despacho Operacional</span></small>
-			</h3>
-            <hr>
-			<h1 class="page-title">Bem Vindo, <?php echo $userinfo->firstname ?><p><small>Seu HUB é: <span class="badge badge-roundless badge-info"><?php echo $userinfo->hub?></span></small></p></h1>
-			<!-- END PAGE HEADER-->
-			<!-- BEGIN DASHBOARD STATS -->
-			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="dashboard-stat blue">
-						<div class="visual">
-							<i class="fa fa-user"></i>
-						</div>
-						<div class="details">
-							<div class="number">
-								 <?php echo $pilotcode; ?>
-							</div>
-							<div class="desc">
-								 <?php echo Auth::$userinfo->rank;?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="dashboard-stat red-thunderbird">
-						<div class="visual">
-							<i class="fa fa-bar-chart-o"></i>
-						</div>
-						<div class="details">
-							<div class="number">
-								 <?php echo $pilot->totalflights; ?>
-							</div>
-							<div class="desc">
-								Voos
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="dashboard-stat green-jungle">
-						<div class="visual">
-							<i class="fa fa-plane"></i>
-						</div>
-						<div class="details">
-							<div class="number">
-								 <?php echo $pilot->totalhours; ?>
-							</div>
-							<div class="desc">
-								 Horas Voadas
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="dashboard-stat purple-seance">
-						<div class="visual">
-							<i class="fa fa-money"></i>
-						</div>
-						<div class="details">
-							<div class="number">
-								 R<?php echo FinanceData::formatMoney((floatval($pilot->totalpay) + floatval($pilot->payadjust))) ?>
-							</div>
-							<div class="desc">
-								 Dinheiro
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- END DASHBOARD STATS -->
-			<div class="clearfix">
-			</div>
-			<div class="row">
-				<div class="col-md-8 col-sm-6">
-					<!-- BEGIN PORTLET-->
-					<div class="portlet light ">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="icon-bar-chart font-green-sharp hide"></i>
-								<span class="caption-subject font-blue bold uppercase">NOTAMs</span>
-								<span class="caption-helper">NOTICES TO AIRMEN</span>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<?php MainController::Run('Notam', 'MostraNotam', 5); ?>
-						</div>
-					</div>
-					<!-- END PORTLET-->
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<!-- BEGIN PORTLET-->
-					<div class="portlet light ">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="icon-share font-blue hide"></i>
-								<span class="caption-subject font-blue bold uppercase">Medalhas</span>
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<?php
+        <?php
+    $data = date('D');
+    $mes = date('M');
+    $dia = date('d');
+    $ano = date('Y');
+    
+    $semana = array(
+        'Sun' => 'Domingo', 
+        'Mon' => 'Segunda-Feira',
+        'Tue' => 'Terca-Feira',
+        'Wed' => 'Quarta-Feira',
+        'Thu' => 'Quinta-Feira',
+        'Fri' => 'Sexta-Feira',
+        'Sat' => 'Sábado'
+    );
+    
+    $mes_extenso = array(
+        'Jan' => 'Janeiro',
+        'Feb' => 'Fevereiro',
+        'Mar' => 'Marco',
+        'Apr' => 'Abril',
+        'May' => 'Maio',
+        'Jun' => 'Junho',
+        'Jul' => 'Julho',
+        'Aug' => 'Agosto',
+        'Nov' => 'Novembro',
+        'Sep' => 'Setembro',
+        'Oct' => 'Outubro',
+        'Dec' => 'Dezembro'
+    );
+  ?>
+  <?php
+   date_default_timezone_set("America/Sao_Paulo");
+    $hr = date("H");
+    if($hr >= 12 && $hr<18) {
+    $resp = "Boa tarde";}
+    else if ($hr >= 0 && $hr <12 ){
+    $resp = "Bom dia";}
+    else {
+    $resp = "Boa noite";}
+  ?>
+<?PHP	
+$voos = $pilot->totalflights;
+if ($voos >0){
+$somar = mysql_query("SELECT SUM(landingrate) as accepted FROM `phpvms_pireps` WHERE pilotid=$userinfo->pilotid");
+						 $total = mysql_fetch_array($somar);
+						 $v_total = $total['accepted'];
+						 $linha = mysql_query("SELECT * FROM `phpvms_pireps` WHERE pilotid=$userinfo->pilotid");
+						 $taxa = mysql_num_rows($linha);
+						 $v_taxa = $v_total/$taxa ;
+}
+else
+{
+$v_taxa = "0";
+}	
+?>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Bem Vindo, <?php echo $userinfo->firstname ?>
+        <small>Seu HUB é: <span class="label label-info"><?php echo $userinfo->hub?></span></small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+        <div class="callout callout-info callout-dismissable" role="alert">
+             <b><center><?php echo $resp?>, hoje é <?php  echo $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}"; ?></center></b>
+          </div>
+		  <!--<div class="callout callout-warning callout-dismissable" role="alert">
+             <b><center>O Sistema da Avianca Virtual Poderá Passar por instabilidades no dia de hoje, pois as rotas serão atualizadas segundo o AIRAC 1712<p>Agradecemos a compreensão</p><p>Staff Avianca Virtual</p></center></b>
+          </div>-->
+		<div class="row">
+		  <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-blue">
+              <div class="inner">
+                <h3><?php echo $pilotcode; ?></h3>
+			  
+                <p><?php echo Auth::$userinfo->rank;?></p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user"></i>
+              </div>
+            </div>
+          </div>
+		  <div class="col-lg-3 col-xs-6 col-md-offset-1">
+            <!-- small box -->
+            <div class="small-box bg-red">
+              <div class="inner">
+                <h3><?php echo $pilot->totalflights; ?></h3>
+			  
+                <p>Voos</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-bar-chart"></i>
+              </div>
+            </div>
+          </div>
+		  <div class="col-lg-3 col-xs-6 col-md-offset-1">
+            <!-- small box -->
+            <div class="small-box bg-green">
+              <div class="inner">
+                <h3><?php echo $pilot->totalhours; ?></h3>
+			  
+                <p>Horas Voadas</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-plane"></i>
+              </div>
+            </div>
+          </div>
+		  <div class="col-lg-3 col-xs-6 col-md-offset-2">
+            <!-- small box -->
+            <div class="small-box bg-purple">
+              <div class="inner">
+                <h3>R<?php echo FinanceData::formatMoney((floatval($pilot->totalpay) + floatval($pilot->payadjust))) ?></h3>
+			  
+                <p>Saldo Amigo</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-money"></i>
+              </div>
+            </div>
+          </div>
+		  <div class="col-lg-3 col-xs-6 col-md-offset-1">
+            <!-- small box -->
+            <div class="small-box bg-maroon">
+              <div class="inner">
+                <h3><?Php echo $v_taxa ?></h3>
+			  
+                <p>ft/min</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-globe"></i>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row --> 
+        <div class="row">
+          <div class="col-md-8 col-sm-6">
+          <!-- Custom Tabs -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab">Notícias</a></li>
+              <li><a href="#tab_2" data-toggle="tab">NOTAMs</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_1">
+                   <?php MainController::Run('News', 'ShowNewsFront', 5); ?>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_2">
+                   <?php MainController::Run('Notam', 'MostraNotam', 5); ?>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- nav-tabs-custom -->
+         </div>
+		 <div class="col-md-4 col-sm-6">
+            <div class="box box-default">
+            <div class="box-header with-border">
+              <i class="fa fa-certificate"></i>
+
+              <h3 class="box-title">Awards</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+			  <?php
                     if(!$allawards)
                     {
-                      echo '<h4 align="center"><span class="label label-danger">Sem Medalhas Ainda!</span></h4>';
+                      echo '              <div class="alert alert-danger">
+                <h4><i class="icon fa fa-warning"></i>Nenhuma Award Encontrada!</h4>
+                Você ainda não possui nenhuma award, participe de algum evento para receber.
+              </div>';
                     }
                     else
                     {                              
                                                         
                   ?>
-                  <ul>
+                   <ul>
                     <?php foreach($allawards as $award){ ?>
-                    <li><?php echo $award->name ?><img src="<?php echo $award->image?>" alt="<?php echo $award->descrip?>" /></li>
+                    <img src="<?php echo $award->image?>" alt="<?php echo $award->descrip?>" width="100px" height="50px" />
                   </ul>  
                   <?php } ?>
                   <?php } ?>
-							</div>
-					</div>
-					<!-- END PORTLET-->
-				</div>
-			</div>
-			<div class="clearfix">
-			</div>
-			<div class="row">
-				<div class="col-md-8 col-sm-6">
-					<div class="portlet light ">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="icon-equalizer font-blue hide"></i>
-								<span class="caption-subject font-blue bold uppercase">Noticias</span>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="row">
-							   <div class="panel-group accordion" id="accordion1">
-							   <?php MainController::Run('News', 'ShowNewsFront', 5); ?>
-							   </div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="portlet light ">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="icon-cursor font-blue hide"></i>
-								<span class="caption-subject font-blue bold uppercase">Status do Sistema</span>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="easy-pie-chart">
-										<div class="number transactions" data-percent="100">
-											<span>
-											100 </span>
-											%
-										</div>
-										SITE <i class="icon-arrow-right"></i>
-									</div>
-								</div>
-								<div class="margin-bottom-10 visible-sm">
-								</div>
-								<div class="col-md-4">
-									<div class="easy-pie-chart">
-										<div class="number visits" data-percent="20">
-											<span>
-											20 </span>
-											%
-										</div>
-										D.O.V <i class="icon-arrow-right"></i>
-									</div>
-								</div>
-								<div class="margin-bottom-10 visible-sm">
-								</div>
-								<div class="col-md-4">
-									<div class="easy-pie-chart">
-										<div class="number bounce" data-percent="5">
-											<span>
-											5 </span>
-											%
-										</div>
-										Sistema <i class="icon-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix">
-			</div>
-			<div class="row">
-				<div class="col-md-8">
-					<!-- BEGIN CONDENSED TABLE PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<span class="caption-subject font-blue bold uppercase">CANAIS DE COMUNICAÇÃO</span>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="table-scrollable">
+            </div>
+            <!-- /.box-body -->
+          </div>
+         </div>
+        </div>
+        <div class="row">
+           		 <div class="col-md-8 col-sm-6">
+            <div class="box box-default">
+            <div class="box-header with-border">
+              <i class="fa fa-certificate"></i>
+
+              <h3 class="box-title">Canais de Comunicação</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+               <div class="table-scrollable">
 								<table class="table table-bordered table-condensed table-hover">
 								<thead>
 								<tr>
@@ -224,15 +219,15 @@
 										 <i class="fa fa-whatsapp"></i> Whatsapp
 									</td>
 									<td>
-									  <span class="badge badge-roundless badge-info">Em breve</span
+									  <a href="https://chat.whatsapp.com/LNDX7wHGehGGoYRWP7CX2t" class="label label-success">Entrar &raquo;</a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										 <i class="fa fa-mobile"></i> Teamspeak
+										 <i class="fa fa-discord"></i> Discord
 									</td>
 									<td>
-									  <span class="badge badge-roundless badge-info">Em breve</span 
+<a class="label label-info" href="https://discord.gg/vZRSK75">Entrar no Servidor</a> 
 									</td>
 								</tr>
 								<tr>
@@ -240,32 +235,29 @@
 										 <i class="fa fa-comments"></i> Fórum
 									</td>
 									<td>
-									  <span class="badge badge-roundless badge-info">Em breve</span 
+									  <span class="label label-info">Em breve</span>
 									</td>
 								</tr>
 								</tbody>
 								</table>
 							</div>
-						</div>
-					</div>
-					<!-- END CONDENSED TABLE PORTLET-->
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<!-- BEGIN REGIONAL STATS PORTLET-->
-					<div class="portlet light ">
-						<div class="portlet-title">
-							<div class="caption">
-								<span class="caption-subject font-blue bold uppercase">Novos Pilotos</span>
 							</div>
-						</div>
-						<div class="portlet-body">
-                          <?php MainController::Run('Pilots', 'RecentFrontPage', 5); ?>
-						</div>
-					</div>
-					<!-- END REGIONAL STATS PORTLET-->
-				</div>
-			</div>
-			<div class="clearfix">
-			</div>
-			</div>
-			</div>
+							</div>
+							</div>
+			<div class="col-md-4 col-sm-6">
+            <div class="box box-default">
+            <div class="box-header with-border">
+              <i class="fa fa-users"></i>
+
+              <h3 class="box-title">Novos Pilotos</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                  <?php MainController::Run('Pilots', 'RecentFrontPage', 5); ?>
+            </div>
+            <!-- /.box-body -->
+          </div>
+         </div>
+        </div>		
+    </section>
+    <!-- /.content -->

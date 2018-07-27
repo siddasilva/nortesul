@@ -1,28 +1,14 @@
-﻿     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+﻿    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo fileurl('lib/js/jquery.form.js');?>"></script>
     <script type="text/javascript" src="<?php echo fileurl('lib/js/phpvms.js');?>"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=weather&sensor=false&key=AIzaSyDNXF-5w4vpCLtqL0hNmxlp9ieGvoVJNCg"></script>
-   <!--breadcrumbs start-->
-    <div class="breadcrumbs">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-4">
-            <h1>
-             Voos no Momento
-            </h1>
-          </div>
-          <div class="col-lg-8 col-sm-8">
-            <ol class="pull-right">
-              <h1 class="pequeno">Avianca Virtual</h1>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--breadcrumbs end-->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKSPxD0Ty8TRo10gl9OP1_k05O4FTT4Bo"
+  type="text/javascript?sensor=true"></script>
 
     <div class="container" id="tourpackages-carousel">
+	<h2 class="text-center">Existem <b><?php echo ACARSData::getLiveFlightCount();?> voos</b> em andamento</h2>
+	  <h2 class="text-center"><small>Aqui você pode acompanhar todos os voos online no momento</small></h2>
        <?php
 /**
  * These are some options for the ACARS map, you can change here

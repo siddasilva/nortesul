@@ -20,11 +20,11 @@ class Notam extends CodonModule
 {
 	public function index()
 	{
-		$this->MostraNotam(5);
+		$this->MostraNotam(50);
 	}
 	
 	// This function gets called directly in the template
-	public function MostraNotam($count=5)
+	public function MostraNotam($count=50)
 	{
 		$sql='SELECT id, subject, body, postedby, UNIX_TIMESTAMP(postdate) AS postdate
 				FROM ' . TABLE_PREFIX .'notam

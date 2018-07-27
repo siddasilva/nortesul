@@ -1,97 +1,63 @@
-﻿    <!--breadcrumbs start-->
-    <div class="breadcrumbs">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-4">
-            <h1>
-             Administradores
-            </h1>
-          </div>
-          <div class="col-lg-8 col-sm-8">
-            <ol class="pull-right">
-              <h1 class="pequeno">Avianca Virtual</h1>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--breadcrumbs end-->
+﻿<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(<?php echo SITE_URL; ?>/lib/skins/avianca/images/img_bg_1.jpg)">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="row row-mt-15em">
 
+						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1>Administradores</h1>
+                            <small><ol class="breadcrumb">
+  <li>Home</li>
+  <li>Organização</li>
+  <li class="active"><b>Administradores</b></li>
+</ol></small>							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</header>
+	
     <div class="container" id="tourpackages-carousel">
 
       <div class="row">
         <div class="profile">
-          <h2>
-            Administradores da <b class="cor">Avianca Virtual</b>
-            <br>
-            <small>Aqui estão descritos todos os Staffs da Avianca Virtual, pessoas que ajudaram e colaboram com o crescimento da V.A.</small>
-          </h2>
-		  		  <h3>
-		  Conselho Administrativo
-		  </h3>
           <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail wow fadeInUp" data-wow-delay=".1s">
-              <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/team/CEO.jpg" alt="">
+            <div class="thumbnail animate-box">
+              <img src="<?php echo SITE_URL?>/lib/skins/aviancaOLD/img/team/CEO.jpg" class="imagem" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                  Arthur Hetem
+                  Arthur <b>Hetem</b>
                 </h4>
                 <hr>
                 <p class="text-center">
-                 CEO Chief Executive Officer
+                 CEO - Chief Executive Officer
                 </p>
                 <hr>
-                <div class="team-social-link">
-                  <a href="https://www.facebook.com/arthur.hetem">
-                    <i class="fa fa-facebook">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-youtube">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-instagram">
-                    </i>
-                  </a>
+                                <div class="team-social-link">
+                  <a href="<?php echo SITE_URL?>/index.php/profile/view/1" class="btn btn-primary" style="margin-left: 20%;">Detalhes</a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail wow fadeInUp" data-wow-delay=".3s">
-              <img src="<?php echo SITE_URL?>/lib/images/noavatar.png" alt="">
+            <div class="thumbnail animate-box">
+              <img src="<?php echo SITE_URL?>/lib/images/noavatar.png" class="imagem" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                  Anderson Victor
+                  Roberto <b>Silva</b>
                 </h4>
                 <hr>
                 <p class="text-center">
-                 VP - Vice Presidente
+                 DO - Diretor de Operações
                 </p>
                 <hr>
                 <div class="team-social-link">
-                  <a href="#">
-                    <i class="fa fa-facebook">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-youtube">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-instagram">
-                    </i>
-                  </a>
+                  <a href="http://aviancavirtual.net.br/PT/index.php/profile/view/5" class="btn btn-primary" style="margin-left: 20%;">Detalhes</a>
                 </div>
               </div>
             </div>
@@ -102,7 +68,7 @@
               <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/team/SLA.png" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                 Rm Breve
+                 Em Breve
                 </h4>
                 <hr>
                 <p class="text-center">

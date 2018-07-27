@@ -9,7 +9,7 @@
 
 $pilotid = Auth::$userinfo->pilotid;
 $last_location = PIREPData::getLastReports($pilotid, 1);
-if(!$last_location) $last_location = "KJFK";
+if(!$last_location) $last_location->arricao = Auth::$userinfo->hub;
 $last_name = OperationsData::getAirportInfo($last_location->arricao);
 $equipment = OperationsData::GetAllAircraftSearchList(true);
 $airlines = OperationsData::getAllAirlines(true);
@@ -32,7 +32,7 @@ $airlines = OperationsData::getAllAirlines(true);
                                         <div class="caption">
                                             <i class="icon-map font-green-haze"></i>
                                             <span class="caption-subject bold font-green-haze uppercase"> Gerador de Escalas </span>
-                                            <span class="caption-helper">AIRGO</span>
+                                            <span class="caption-helper">Avianca Virtual</span>
                                         </div>
                                     </div>
 
@@ -62,7 +62,7 @@ $airlines = OperationsData::getAllAirlines(true);
              <td width ="25%"><b>Airline:</b></td>
             <td width ="75%"><select id="airline" name="airline" class="bs-select form-control input-small" data-style="purple">
 	            <option value="">Airline</option>
-            <option value="SKA">Sky Alliance</option>            </td>
+            <option value="ONE">Avianca</option>            </td>
         </tr>
 		<tr>
 			<div class="form-group">
