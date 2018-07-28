@@ -20,14 +20,14 @@
 			</div>
 		</div>
 	</header>
-<div class="container" id="tourpackages-carousel">
+<div class="container id="tourpackages-carousel">
               <?php
 	          if(!$allpilots) {
 		        echo 'Sem Pilotos!';
 		        return;
 	          }
 			  ?>
-      <table id="tabledlist" class="table table-striped">
+      <table id="tabledlist" class="table table-striped ooo">
             <thead>
               <tr>
 	           <th class="quadro roxo" width="16%">Mátricula</th>

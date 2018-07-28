@@ -23,7 +23,7 @@
 	
 <div class="container" id="tourpackages-carousel">
 
-      <div class="row">
+      <div class="row ooo">
         <div class="profile">
 			            <?php 
 		if(!$ranks)

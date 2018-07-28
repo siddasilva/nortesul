@@ -45,7 +45,7 @@
 <!--header end here-->	
 <!--copy rights end here-->
 <div class="copy-rights">		 	
-	<p>&copy; <?php echo date("Y");?>NorteSul. All Rights Reserved | Developed by  Arthur Hetem</p>
+	<p>&copy; <?php echo date("Y");?> NorteSul. All Rights Reserved | Developed by  Arthur Hetem</p>
     <p>&copy; <?php echo date("Y");?> NorteSul. Todos Os Direitos Reservados | Desenvolvido por  Arthur Hetem</p>	
 </div>
 <!--copyrights start here-->

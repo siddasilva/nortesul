@@ -6,7 +6,7 @@
 				<div class="col-md-4">
 					<div class="gtco-widget">
 						<h3>Quem Somos</h3>
-						<p>A Avianca Virtual é uma organização virtual movida por entusiastas da aviação que busca simular com seriedade, qualidade e precisão as operações da Avianca Linhas Aéreas nas redes de voo online IVAO e VATSIM.</p>
+						<p>A NorteSul é uma organização virtual movida por entusiastas da aviação que busca simular com seriedade, qualidade e precisão as operações de uma Companhia Aérea na rede de voo online IVAO.</p>
 
 <p>Utilizando como plataforma de voo o Microsoft Flight Simulator, XPlane ou Prepar3D e <b>NÃO POSSUÍMOS FINS LUCRATIVOS</b>.</p>
 					</div>
@@ -53,7 +53,7 @@ else { echo "Cruise"; }?>
 						<h3>Contatos</h3>
 						<ul class="gtco-quick-contact">
 						Entre em contato com a nossa equipe e tire dúvidas.
-							<li><i class="far fa-envelope"></i><a href="mailto:contato@aviancavirtual.tk">contato@aviancavirtual.tk</a></li>
+							<li><i class="far fa-envelope"></i><a href="mailto:contato@aviancavirtual.tk">contato@nortesulvirtual.com</a></li>
 							<li><a href="https://www.facebook.com/aviancavirtualbr/" class="fab fa-facebook"></a> <a href="https://www.instagram.com/aviancav/" class="fab fa-instagram"></a></li>
 						</ul>
 					</div>

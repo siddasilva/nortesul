@@ -21,7 +21,7 @@
 		</div>
 	</header>
 	
-    <div class="container" id="tourpackages-carousel">
+    <div class="container ooo" id="tourpackages-carousel">
        <table id="tabledlist" class="table table-striped">
 <thead>
 <tr>

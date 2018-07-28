@@ -27,10 +27,10 @@
         <div class="profile">
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail animate-box">
-              <img src="<?php echo SITE_URL?>/lib/skins/aviancaOLD/img/team/CEO.jpg" class="imagem" alt="">
+              <img src="<?php echo SITE_URL?>/lib/images/noavatar.png" class="imagem" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                  Arthur <b>Hetem</b>
+                  XXXXXX <b>XXXXX</b>
                 </h4>
                 <hr>
                 <p class="text-center">
@@ -49,11 +49,11 @@
               <img src="<?php echo SITE_URL?>/lib/images/noavatar.png" class="imagem" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                  Roberto <b>Silva</b>
+                  XXXXXX <b>XXXXX</b>
                 </h4>
                 <hr>
                 <p class="text-center">
-                 DO - Diretor de Operações
+                 COO - Chief Of Operations
                 </p>
                 <hr>
                 <div class="team-social-link">
@@ -64,68 +64,38 @@
           </div>
 
           <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail wow fadeInUp" data-wow-delay=".5s">
-              <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/team/SLA.png" alt="">
+            <div class="thumbnail animate-box">
+              <img src="<?php echo SITE_URL?>/lib/images/noavatar.png" class="imagem" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                 Em Breve
+                  XXXXXX <b>XXXXX</b>
                 </h4>
                 <hr>
                 <p class="text-center">
-                --
+                 CCO - Chief Of Comunications
                 </p>
                 <hr>
                 <div class="team-social-link">
-                  <a href="https://www.facebook.com/NikoAnnd">
-                    <i class="fa fa-facebook">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter">
-                    </i>
-                  </a>
-                  <a href="https://www.youtube.com/channel/UCRPG1g1g9hjwaxNjTv_07AA">
-                    <i class="fa fa-youtube">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-instagram">
-                    </i>
-                  </a>
+                  <a href="http://aviancavirtual.net.br/PT/index.php/profile/view/5" class="btn btn-primary" style="margin-left: 20%;">Detalhes</a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail wow fadeInUp" data-wow-delay=".7s">
-              <img src="<?php echo SITE_URL?>/lib/skins/Avianca/img/team/SLA.png" alt="">
+            <div class="thumbnail animate-box">
+              <img src="<?php echo SITE_URL?>/lib/images/noavatar.png" class="imagem" alt="">
               <div class="caption">
                 <h4 class="text-center">
-                  Em Breve
+                  XXXXXX <b>XXXXX</b>
                 </h4>
                 <hr>
                 <p class="text-center">
-                  --
+                 CTO - Chief Of Technology
                 </p>
                 <hr>
                 <div class="team-social-link">
-                  <a href="#">
-                    <i class="fa fa-facebook">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-twitter">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-youtube">
-                    </i>
-                  </a>
-                  <a href="#">
-                    <i class="fa fa-instagram">
-                    </i>
-                  </a>
+                  <a href="http://aviancavirtual.net.br/PT/index.php/profile/view/5" class="btn btn-primary" style="margin-left: 20%;">Detalhes</a>
                 </div>
               </div>
             </div>

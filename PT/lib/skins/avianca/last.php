@@ -38,16 +38,16 @@
 $count = 30;
 $pireps = PIREPData::getRecentReportsByCount($count);
 ?>
-<table width="725 px" border="1" class="table table-hover">
+<table width="725 px" border="1" class="table table-striped">
   <thead>
  <tr align="center" valign="middle">
-   <th>Tripulante</th>
-   <th>Voo #</th>
-   <th>Origem</th>
-   <th>Destino</th>
-   <th>Duração</th>
-   <th>Touchdown</th>
-   <th>Aeronave</th>
+   <th class="quadro roxo">Tripulante</th>
+   <th class="quadro roxo">Voo #</th>
+   <th class="quadro roxo">Origem</th>
+   <th class="quadro roxo">Destino</th>
+   <th class="quadro roxo">Duração</th>
+   <th class="quadro roxo">Touchdown</th>
+   <th class="quadro roxo">Aeronave</th>
  </tr>
    </thead>
    <tbody>
@@ -72,7 +72,7 @@ if(count($pireps) > 0)
 }
 else
 {
-   echo "<tr><td>There are no recent flights!</td></tr>";
+   echo "<tr><td>Nada para mostrar!</td></tr>";
 }
 ?>
 </table>

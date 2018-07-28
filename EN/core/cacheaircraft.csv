@@ -1,0 +1,5 @@
+icao,name,fullname,registration,downloadlink,imagelink,range,weight,cruise,maxpax,maxcargo,enabled,rank
+A319,A319-115,"Airbus A319",PR-AVB,,,0,0,0,132,755,1,
+A320,A320-214,"Airbus A320-214",PR-AVR,,https://d31asmy75eposw.cloudfront.net/full/5/38472_1478997359.jpg,0,0,0,162,17500,1,"New Hire"
+A320,A320-214,"Airbus A320-214",PR-AVP,,http://cdn-www.airliners.net/photos/airliners/7/6/3/2762367.jpg?v=v40,0,0,0,162,17500,1,"New Hire"
+A320,A320-214,"Airbus A320-214",PR-AVQ,,http://cdn-www.airliners.net/photos/airliners/1/1/3/2699311.jpg?v=v40,0,0,0,162,17500,1,

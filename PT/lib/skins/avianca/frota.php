@@ -535,7 +535,7 @@
 					<p>Realizamos diversos voos partindo do Brasil para o mundo, sendo uma das Virtual Airlines em operação melhor conceituada em voos online!</p>
 				</div>
 				<div class="col-md-6">
-				    <a href="<?php echo SITE_URL; ?>/index.php/fleet" class='btn btn-primary pull-right'><i class="fas fa-plane"></i>DETALHES DA FROTA</a>
+				    <a href="<?php echo SITE_URL; ?>/index.php/fleet" class='btn btn-info pull-right'><i class="fas fa-plane"></i> DETALHES DA FROTA</a>
 				</div>
 				</div>
 			</div>

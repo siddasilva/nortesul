@@ -71,17 +71,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #09C6AB;
+  background: #009b3a;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #09C6AB;
+  background: #009b3a;
 }
 
 ::selection {
   color: #fff;
-  background: #09C6AB;
+  background: #009b3a;
 }
 
 .gtco-container {
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.3s;
 }
 .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
-  color: #DA0808;
+  color: #009b3a;
 }
 .gtco-nav ul li.has-dropdown {
   position: relative;
@@ -201,16 +201,16 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 15px;
 }
 .gtco-nav ul li.has-dropdown .dropdown li a:hover {
-  color: #DA0808;
+  color: #009b3a;
 }
 .gtco-nav ul li.has-dropdown .dropdown li.active > a {
   color: #000 !important;
 }
 .gtco-nav ul li.has-dropdown:hover a, .gtco-nav ul li.has-dropdown:focus a {
-  color: #fff;
+  color: #009b3a;
 }
 .gtco-nav ul li.btn-cta a {
-  color: #09C6AB;
+  color: #009b3a;
 }
 .gtco-nav ul li.btn-cta a span {
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -693,7 +693,7 @@ form label {
 #gtco-counter .counter {
   font-size: 50px;
   margin-bottom: 10px;
-  color: #09C6AB;
+  color: #dc3f6a;
   font-weight: 100;
   display: block;
 }
@@ -759,7 +759,7 @@ form label {
 }
 
 #gtco-features {
-  background: #DA0808;
+  background: #009b3a;
 }
 #gtco-features .gtco-heading h2 {
   color: #fff;
@@ -774,7 +774,7 @@ form label {
   width: 90px;
   height: 90px;
   border: 1px solid rgba(255, 255, 255, 0.8);
-  background: #DA0808;
+  background: #dc3f6a;
 }
 #gtco-features .feature-center .icon i {
   color: #fff;
@@ -907,7 +907,7 @@ form label {
 }
 
 #gtco-subscribe {
-  background: #DA0808;
+  background: #009b3a;
 }
 #gtco-subscribe .form-control {
   background: transparent;
@@ -1897,7 +1897,7 @@ form label {
     color: #fff;
     margin-right: 30px;
 }
-.ico-bg { background: #DA0808 }
+.ico-bg { background: #dc3f6a }
 .round-fifty {
     border-radius: 50px;
     -moz-border-radius: 50px;
@@ -1923,7 +1923,7 @@ form label {
 border-radius:50%;
 -moz-border-radius:50%;
 -webkit-border-radius:50%;
-border: 2px solid #DA0808;
+border: 2px solid #dc3f6a;
 }
 
 .alert .fas{
@@ -1939,8 +1939,11 @@ border: 2px solid #DA0808;
 	border:1px solid #D9DCD7;
 }
 .roxo{
-	background-color:#DA0808;
+	background-color:#009b3a;
 	color:#fff;
 }
+.ooo{
+	margin-top:650px;
+}	
 
 /*# sourceMappingURL=style.css.map */

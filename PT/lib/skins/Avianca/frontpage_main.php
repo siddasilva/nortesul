@@ -8,13 +8,13 @@
 
 					<div class="row row-mt-15em">
 						<div class="col-md-7 mt-text animate-box dividir" data-animate-effect="fadeInUp">
-							<h1>Venha voar nos céus VIRTUAIS</h1>	
+							<h1>Viajar e conhecer novos lugares?</h1>	
 						</div>
 						<div class="col-md-4 col-md-push-1 mt-text animate-box" data-animate-effect="fadeInRight">
 									
 									
-											<h1>Se você deseja ir ao Site Oficial da Avianca, clique abaixo:</h1>
-											<a href="http://avianca.com.br" class="btn btn-danger">SITE OFICIAL AVIANCA</a>
+											<h1>Venha voar</h1>
+											<img src="<?php echo SITE_URL; ?>/lib/skins/avianca/images/logo.png" height="55px" width="255px">
 
 										
 									</div>
@@ -29,8 +29,8 @@
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>The best <b>Avianca Virtual</b> Airline</h2>
-					<p>Replicating Avianca operations in flight simulation</p>
+					<h2>A sua <b>melhor</b> Virtual Airline</h2>
+					<p>Operating real operations in flight simulation</p>
 				</div>
 			</div>
 			
@@ -45,8 +45,8 @@ $resp = "Bom dia";}
 else {
 $resp = "Boa noite";}
 echo "$resp";
-?>, bem vindo a Avianca Virtual</h2>
-					<h4>A <b>Avianca Virtual</b> é uma Companhia Aérea Virtual sem fins lucrativos que busca simular com a maior fidelidade possível as operações da <b>Avianca Brasil</b>. <p>Atualmente contamos com <b><?php echo StatsData::PilotCount(); ?></b> membros que simulam através das redes de voo online IVAO e VATSIM, utilizando as plataformas Microsoft Flight Simulator, XPlane, Prepar3D e softwares próprios que deixam a simulação mais próxima da realidade.</p></h4>
+?>, bem vindo a NorteSul Linhas Aéreas Virtuais</h2>
+					<h4>A <b>NorteSul</b> é uma Companhia Aérea Virtual sem fins lucrativos que busca simular com a maior fidelidade possível operações de uma Companhia Aérea Real. <p>Atualmente contamos com <b><?php echo StatsData::PilotCount(); ?></b> membros que simulam através da rede de voo online IVAO, utilizando as plataformas Microsoft Flight Simulator, XPlane, Prepar3D e softwares próprios que deixam a simulação mais próxima da realidade.</p></h4>
 				</div>
 				<div class="col-md-6">
 				     <!-- Nav tabs -->
@@ -125,8 +125,8 @@ echo "$resp";
 
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2>Detentora oficial do callsign <b>ONE</b> nas redes</h2>
-					<p>Utilizamos as principais redes de simulação aérea virtual, <b>VATSIM</b> e <b>IVAO</b></p>
+					<h2>Detentora oficial do callsign <b>NOR</b> nos céus virtuais</h2>
+					<p>Utilizamos a principal rede de simulação aérea virtual, a <b>IVAO</b></p>
 				</div>
 			</div>
  
@@ -225,10 +225,10 @@ echo "$resp";
                 </i>
               </div>
                 <h3>
-                  IVAO/VATSIM Flight Plan
+                  IVAO Flight Plan
                 </h3>
                 <p>
-                  O objetivo de um plano de voo apresentado (FPL) é trazer mais comodidade aos pilotos operantes nas redes de voo IVAO e VATSIM
+                  O objetivo de um plano de voo apresentado (FPL) é trazer mais comodidade aos pilotos operantes na rede de voo IVAO.
                   <br>
                 </p>
             </div>
@@ -257,7 +257,7 @@ echo "$resp";
                   SOP AviancaV
                 </h3>
                 <p>
-                  STANDARD OPERATING PROCEDURES integra o Manual Geral de Operações que é um conjunto de documentos e guias operacionais a ser seguido pelos tripulantes para que a Avianca Virtual alcance o nível máximo de qualidade operacional possível.
+                  STANDARD OPERATING PROCEDURES integra o Manual Geral de Operações que é um conjunto de documentos e guias operacionais a ser seguido pelos tripulantes para que a NorteSul alcance o nível máximo de qualidade operacional possível.
                   <br>
                 </p>
             </div>

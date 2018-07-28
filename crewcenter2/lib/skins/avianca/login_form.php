@@ -5,7 +5,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
   <div class="login-logo">
-    <img src="<?php echo SITE_URL?>/lib/skins/avianca/img/AviancaCrew.png" alt="logo" class="logo-default" width="256px" height="144px" />
+    <img src="<?php echo SITE_URL?>/lib/skins/avianca/img/LogoCrew.png" alt="logo" class="logo-default" width="256px" height="144px" />
   </div>
     <p class="login-box-msg"><h3>Acessar CrewCenter</h3></p>
 

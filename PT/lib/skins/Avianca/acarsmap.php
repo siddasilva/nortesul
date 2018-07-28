@@ -6,7 +6,28 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKSPxD0Ty8TRo10gl9OP1_k05O4FTT4Bo"
   type="text/javascript?sensor=true"></script>
 
-    <div class="container" id="tourpackages-carousel">
+  <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(<?php echo SITE_URL; ?>/lib/skins/avianca/images/img_bg_2.jpg)">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="row row-mt-15em">
+
+						<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1>Tracking</h1>
+                            <small><ol class="breadcrumb">
+  <li>Home</li>
+  <li class="active"><b>Tracking</b></li>
+</ol></small>							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</header>
+    <div class="container ooo" id="tourpackages-carousel">
 	<h2 class="text-center">Existem <b><?php echo ACARSData::getLiveFlightCount();?> voos</b> em andamento</h2>
 	  <h2 class="text-center"><small>Aqui você pode acompanhar todos os voos online no momento</small></h2>
        <?php
